@@ -78,12 +78,12 @@ function Map() {
 
         for(var m=1;m<=4;m++){
             this.checkVertical(i+m,j)
-            this.checkVertical(i,j+m);
+            this.checkHorizontal(i,j+m);
         }
         
     }
 
-    //爆炸的水平方向
+    //爆炸的垂直方向
     this.checkVertical=function (i,j) {
         if(i<0||i>=rowNum)
             return;
@@ -95,7 +95,7 @@ function Map() {
         }
     }
 
-    //爆炸的垂直方向
+    //爆炸的水平方向
     this.checkHorizontal=function (i,j) {
         if(j<0||j>=colNum)
             return;
